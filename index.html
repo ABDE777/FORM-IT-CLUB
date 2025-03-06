@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULAIRE D'INSCRIPTION</title>
+        <link rel="icon" href="logo.jpg" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #9C27B0;
+            --secondary: #FF4081;
+            --accent: #FFD700;
+            --glass: rgba(255, 255, 255, 0.15);
+            --transition-time: 0.4s;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            min-height: 100vh;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .particles {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            animation: fadeIn 1s forwards;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            opacity: 0;
+            animation: fadeInUp 1s 0.5s forwards;
+        }
+
+        .title {
+            color: white;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+            transform: translateY(-20px);
+            opacity: 0;
+            animation: titleAppear 1s 0.3s forwards;
+        }
+
+        .theme {
+            color: var(--accent);
+            font-size: 1.8rem;
+            margin: 1.5rem 0;
+            opacity: 0;
+            animation: fadeUp 1s 0.5s forwards;
+        }
+
+        .event-info {
+            color: white;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .date-container {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            opacity: 0;
+            animation: fadeInUp 1s 1s forwards;
+        }
+
+        .date-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease-in-out, background-color 0.3s;
+        }
+
+        .date-item:hover {
+            background-color: var(--primary);
+            transform: scale(1.1);
+        }
+
+        .form-box {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-in-out;
+            opacity: 0;
+            animation: fadeInUp 1s 1.5s forwards;
+        }
+
+        .form-box:hover {
+            transform: scale(1.05);
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 700px;
+            border: none;
+            border-radius: 10px;
+            min-height: 700px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        iframe:hover {
+            border-radius: 15px;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes titleAppear {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeUp {
+            to {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.5rem;
+            }
+
+            .title {
+                font-size: 2.2rem;
+            }
+
+            .date-container {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .form-box {
+                padding: 1.5rem;
+                max-width: 100%;
+            }
+
+            iframe {
+                min-height: 600px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="particles"></div>
+
+    <div class="container">
+        <div class="header">
+            <h1 class="title">HACKATHON EMPRESS 2024</h1>
+            <div class="theme">💻 Tech for Women's Empowerment 🌸</div>
+
+            <div class="event-info">
+                <h2>À l'occasion de la Journée Internationale des Femmes</h2>
+                <p>Proposez des solutions technologiques innovantes pour l'autonomisation des femmes</p>
+
+                <div class="date-container">
+                    <div class="date-item">
+                        <i class="fas fa-calendar-alt"></i>
+                        <strong>Début:</strong> 6 Mars 2025
+                    </div>
+                    <div class="date-item">
+                        <i class="fas fa-flag-checkered"></i>
+                        <strong>Fin:</strong> 11 Mars 2025
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-box">
+            <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSfKxqENoTEsx9kV1CuVXOLNN9YM1DNpjVTDhsBKCbvYc7cgUA/viewform?embedded=true"
+                width="640" height="1911" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+        </div>
+    </div>
+
+</body>
+
+</html>
